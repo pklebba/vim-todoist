@@ -4,22 +4,21 @@
 python import sys
 python import vim
 python sys.path.append(vim.eval('expand("<sfile>:h")'))
+python import vim_todoist
 
 " --------------------------------
 "  Function(s)
 " --------------------------------
-function! TemplateExample()
-python << endOfPython
+function! GetTasks()
+python vim_todoist.get_tasks()
+endfunction
 
-from vim_todoist import vim_todoist_example
-
-for n in range(5):
-    print(vim_todoist_example())
-
-endOfPython
+function! GetProjects()
+python vim_todoist.get_projects()
 endfunction
 
 " --------------------------------
 "  Expose our commands to the user
 " --------------------------------
-command! Example call TemplateExample()
+command! ToDo call GetTasks()
+command! ToDoProjects call GetProjects()
