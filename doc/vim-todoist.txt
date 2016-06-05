@@ -1,0 +1,27 @@
+*vim-todoist.txt* A short multi line description of your plugin
+
+===============================================================================
+CONTENTS                                                          *vim-todoist*
+
+    1. Intro .............................................. |vim-todoist-intro|
+    2. Requirements ................................ |vim-todoist-requirements|
+    3. Usage .............................................. |vim-todoist-usage|
+    4. Licence .......................................... |vim-todoist-licence|
+===============================================================================
+1. Intro                                                    *vim-todoist-intro*
+
+Overview of plugin
+
+2. Requirements                                      *vim-todoist-requirements*
+
+What additional programs are required to run the plugin
+
+3. Usage                                                    *vim-todoist-usage*
+
+How to use the plugin. What functions does it give the user?
+
+4. Licence                                                *vim-todoist-licence*
+
+This is open source make sure to include a licence
+
+vim:ft=help
