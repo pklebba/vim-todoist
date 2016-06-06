@@ -2,8 +2,28 @@ import todoist
 import vim
 
 def get_tasks():
-    return "ToDo"
+    sync = get_sync()
+    if sync:
+        print "===== Tasks To Do ====="
 
+        for task in sync['items']:
+            print "-> {}".format(task['content'].encode('utf-8'))
+
+        print "======================="
+
+
+def get_completed_tasks():
+    api = get_api()
+
+    if api:
+        tasks = api.get_all_completed_items()
+
+        print "===== Completed Tasks ====="
+        for task in tasks['items']:
+            print "[{}] -> {}".format(task['completed_date'], task['content'].encode('utf-8'))
+
+        print "==========================="
+        
 
 def get_projects():
 

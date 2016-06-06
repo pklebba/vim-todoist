@@ -13,6 +13,10 @@ function! GetTasks()
 python vim_todoist.get_tasks()
 endfunction
 
+function! GetCompletedTasks()
+python vim_todoist.get_completed_tasks()
+endfunction
+
 function! GetProjects()
 python vim_todoist.get_projects()
 endfunction
@@ -22,3 +26,4 @@ endfunction
 " --------------------------------
 command! ToDo call GetTasks()
 command! ToDoProjects call GetProjects()
+command! ToDoCompleted call GetCompletedTasks()
